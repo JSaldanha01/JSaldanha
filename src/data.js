@@ -68,14 +68,14 @@ export const portfolioData = {
       organization: "President University Timorese Student Association",
       position: "Secretary I",
       period: "October 2024 - October 2025",
-      description: "Completed high school education and graduated in December 2022."
+      description: ""
     },
     {
-      organization: "Faculty Association of Computer Science",
+      organization: "President University Faculty Association of Computer Science",
       position: "Vice Chairperson II",
       period: "October 2024 - October 2025",
       description: ""
-    } 
+    }
   ],
 
   education: [
@@ -86,8 +86,6 @@ export const portfolioData = {
       description: "Currently pursuing a Bachelor's degree in Information Systems. GPA: 3.44 / 4.00",
       achievements: [
         "ASEAN Undergraduate Scholarship Award",
-        "Vice Chairperson II, Faculty Association of Computer Science",
-        "Secretary I, President University Timorese Student Association"
       ]
     },
     {
