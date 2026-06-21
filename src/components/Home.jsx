@@ -201,7 +201,7 @@ const Home = () => {
             <div className="about-stats-col">
               {[
                 { num: 'ASEAN', label: 'Undergraduate Scholar' },
-                { num: '3.44', label: 'GPA / 4.00' },
+                { num: '3.56', label: 'GPA / 4.00' },
                 { num: 'B2', label: 'English · IELTS 6.5' },
                 { num: '🇹🇱', label: 'From Timor-Leste' },
               ].map((s, i) => (
@@ -220,7 +220,13 @@ const Home = () => {
               <div className="languages-grid">
                 {portfolioData.languages.map((lang, i) => (
                   <div key={i} className={`language-card reveal reveal-d${i + 1}`}>
-                    <span className="language-flag">{lang.flag}</span>
+                    <img
+                      src={`https://flagcdn.com/${lang.flagCode}.svg`}
+                      width="36"
+                      alt={`${lang.name} flag`}
+                      className="language-flag"
+                      style={{ borderRadius: '4px', objectFit: 'cover' }}
+                    />
                     <span className="language-name">{lang.name}</span>
                     <span className="language-level">{lang.level}</span>
                     <span className="language-detail">{lang.detail}</span>
