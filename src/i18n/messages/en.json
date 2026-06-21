@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "title": "Information Systems Student",
+    "description": "Passionate about technology, software development, and creating innovative solutions. Currently pursuing my degree in Information Systems with a focus on full-stack development and system architecture.",
+    "viewWork": "View My Work",
+    "downloadCv": "Download CV",
+    "findMe": "Find me on",
+    "stats": {
+      "gpa": "GPA",
+      "projects": "Projects",
+      "languages": "Languages",
+      "ielts": "IELTS 6.5"
+    }
+  },
+  "about": {
+    "sectionLabel": "Who I am",
+    "sectionTitle": "About",
+    "sectionTitleSpan": "Me",
+    "text": [
+      "I'm an Information Systems student from Timor-Leste with a strong passion for technology and software development. My international journey — from the Portuguese School of Dili to President University in Indonesia on an ASEAN Scholarship — has shaped me into an adaptable, globally-minded developer.",
+      "I specialize in both frontend and backend development, with hands-on industry experience building enterprise-grade systems for Telkomcel's core BSS infrastructure, the Ministry of Health Timor-Leste, and Bank Rakyat Indonesia TL. My academic background in ERP and Information Systems gives me a strong foundation for designing scalable, real-world solutions.",
+      "When I'm not coding, I enjoy photography, video editing, and exploring new technologies. I also serve as Secretary I of the Timorese Student Association and Vice Chairperson of the Faculty of Computer Science — roles that have sharpened my leadership and communication skills."
+    ],
+    "stats": {
+      "scholar": "Undergraduate Scholar",
+      "gpa": "GPA / 4.00",
+      "english": "English · IELTS 6.5",
+      "from": "From Timor-Leste"
+    },
+    "languagesTitle": "Languages"
+  },
+  "skills": {
+    "sectionLabel": "What I work with",
+    "sectionTitle": "Skills &",
+    "sectionTitleSpan": "Technologies"
+  },
+  "projects": {
+    "sectionLabel": "What I've built",
+    "sectionTitle": "Featured",
+    "sectionTitleSpan": "Projects",
+    "capstone": "Capstone Project",
+    "liveDemo": "Live Demo",
+    "items": [
+      {
+        "title": "João Saldanha University Management System (JSU-UMS)",
+        "description": "Capstone Final Project: A comprehensive full-stack educational platform for academic administration. Built with Laravel 11 and deployed on a secure LEMP stack cloud VPS. Features automated CI/CD, real-time observability via Prometheus/Grafana, and high-performance background processing."
+      },
+      {
+        "title": "Epicor Kinetic ERP Implementation",
+        "description": "Individual capstone project: Implemented Epicor Kinetic ERP for a simulated pencil manufacturing company. Executed a full Make-to-Order business cycle covering Material Management, Purchasing, Production, Shipment, Invoicing, and Cash Receipt."
+      },
+      {
+        "title": "PU IS Mobile App",
+        "description": "Led the proposal and design of a Flutter + Firebase mobile app for the PU Information Systems Major Association. Outlined features including Google Sign-In, email auth, and real-time Cloud Firestore updates."
+      },
+      {
+        "title": "Telkomcel OCS Web Portal",
+        "description": "An enterprise BSS application managing telecommunication workflows, subscriber lifecycles, and complex billing logic. Engineered a scalable frontend architecture with lazy loading, modern data fetching, and strict role-based access control using the Metronic 9 design system."
+      },
+      {
+        "title": "Telkomcel CRM360 & Call Center",
+        "description": "Revamped the CRM360 and Call Center system for Telkomcel. Integrated APIs using Swagger and resolved frontend issues through bug fixing."
+      },
+      {
+        "title": "Saúde Hospital Information System",
+        "description": "Developed healthcare administration interfaces for the Ministry of Health, Timor-Leste. Implemented Portuguese and Tetum i18n translations, along with various logistics modules."
+      },
+      {
+        "title": "BRI TL Web Dashboard",
+        "description": "Contributed to frontend development for banking and payment-related Dashboard, establishing standardized terminologies for Bank Rakyat Indonesia Timor-Leste Branch."
+      }
+    ]
+  },
+  "education": {
+    "sectionLabel": "My journey",
+    "sectionTitle": "Education &",
+    "sectionTitleSpan": "Experience",
+    "eduTitle": "Education",
+    "expTitle": "Experience",
+    "items": [
+      {
+        "period": "Sep 2023 - Present",
+        "degree": "Information System — Concentration: Enterprise Resource Planning (ERP)",
+        "institution": "President University",
+        "description": "Currently pursuing a Bachelor's degree in Information Systems. Received education in English.",
+        "achievements": [
+          "ASEAN Undergraduate Scholarship Award"
+        ]
+      },
+      {
+        "period": "2018 - Dec 2022",
+        "degree": "High School Diploma",
+        "institution": "Colégio Paulo VI",
+        "description": "Completed high school education and graduated in December 2022. Received education in Tetun language."
+      },
+      {
+        "period": "2008 - 2018",
+        "degree": "Middle School",
+        "institution": "Escola Portuguesa de Díli (Portuguese School)",
+        "description": "Completed Kindergarten through Grade 8. Received bilingual education in Portuguese."
+      }
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "period": "Jan 2025 - Jun 2025",
+        "position": "Frontend Developer Intern",
+        "organization": "PT Shibly Teknologi Solusi",
+        "description": "Developed enterprise frontend systems for Telkomcel's core BSS platform, BRI Timor-Leste's web dashboard, and the Ministry of Health's Saúde HIS. Worked with React, TypeScript, and Tailwind CSS across high-stakes client projects."
+      },
+      {
+        "period": "October 2024 - October 2025",
+        "position": "Secretary I",
+        "organization": "President University Timorese Student Association",
+        "description": "Managed administrative duties, organized meeting minutes, and coordinated communication between association members."
+      },
+      {
+        "period": "October 2024 - October 2025",
+        "position": "Vice Chairperson II",
+        "organization": "President University Faculty Association of Computer Science",
+        "description": "Led faculty association activities, organized technical events, and advocated for student welfare within the Faculty of computer science."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Let's connect",
+    "sectionTitle": "Get In",
+    "sectionTitleSpan": "Touch",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send Message"
+    }
+  }
+}

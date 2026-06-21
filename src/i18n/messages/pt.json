@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "education": "Educação",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "title": "Estudante de Sistemas de Informação",
+    "description": "Apaixonado por tecnologia, desenvolvimento de software e criação de soluções inovadoras. Atualmente cursando Sistemas de Informação com foco em desenvolvimento full-stack e arquitetura de sistemas.",
+    "viewWork": "Ver Meu Trabalho",
+    "downloadCv": "Baixar CV",
+    "findMe": "Encontre-me no",
+    "stats": {
+      "gpa": "Média",
+      "projects": "Projetos",
+      "languages": "Idiomas",
+      "ielts": "IELTS 6.5"
+    }
+  },
+  "about": {
+    "sectionLabel": "Quem eu sou",
+    "sectionTitle": "Sobre",
+    "sectionTitleSpan": "Mim",
+    "text": [
+      "Sou um estudante de Sistemas de Informação de Timor-Leste com grande paixão por tecnologia e desenvolvimento de software. Minha jornada internacional — da Escola Portuguesa de Díli à President University na Indonésia com uma Bolsa ASEAN — me moldou em um desenvolvedor adaptável e com mentalidade global.",
+      "Especializo-me em desenvolvimento frontend e backend, com experiência prática na indústria construindo sistemas corporativos para a infraestrutura principal de BSS da Telkomcel, Ministério da Saúde de Timor-Leste e Banco Rakyat Indonesia TL. Minha base acadêmica em ERP e Sistemas de Informação me dá uma base sólida para projetar soluções escaláveis para o mundo real.",
+      "Quando não estou programando, gosto de fotografia, edição de vídeo e explorar novas tecnologias. Também atuo como Secretário I da Associação de Estudantes Timorenses e Vice-Presidente da Faculdade de Ciência da Computação — funções que aprimoraram minhas habilidades de liderança e comunicação."
+    ],
+    "stats": {
+      "scholar": "Bolsista de Graduação",
+      "gpa": "Média / 4.00",
+      "english": "Inglês · IELTS 6.5",
+      "from": "De Timor-Leste"
+    },
+    "languagesTitle": "Idiomas"
+  },
+  "skills": {
+    "sectionLabel": "Com o que trabalho",
+    "sectionTitle": "Habilidades &",
+    "sectionTitleSpan": "Tecnologias"
+  },
+  "projects": {
+    "sectionLabel": "O que eu construí",
+    "sectionTitle": "Projetos",
+    "sectionTitleSpan": "Destaque",
+    "capstone": "Projeto de Conclusão",
+    "liveDemo": "Ver Ao Vivo",
+    "items": [
+      {
+        "title": "Sistema de Gestão Universitária (JSU-UMS)",
+        "description": "Projeto Final: Uma plataforma educacional full-stack abrangente para administração acadêmica. Construído com Laravel 11 e implantado em um VPS na nuvem com stack LEMP seguro. Apresenta CI/CD automatizado, observabilidade em tempo real via Prometheus/Grafana e processamento em segundo plano de alto desempenho."
+      },
+      {
+        "title": "Implementação de ERP Epicor Kinetic",
+        "description": "Projeto individual: Implementação do ERP Epicor Kinetic para uma empresa simulada de fabricação de lápis. Executou um ciclo completo de negócios Make-to-Order cobrindo Gestão de Materiais, Compras, Produção, Expedição, Faturamento e Recebimento."
+      },
+      {
+        "title": "Aplicativo Móvel PU IS",
+        "description": "Liderou a proposta e design de um aplicativo móvel Flutter + Firebase para a Associação de Sistemas de Informação da PU. Recursos delineados incluindo Google Sign-In, autenticação por e-mail e atualizações do Cloud Firestore em tempo real."
+      },
+      {
+        "title": "Portal Web Telkomcel OCS",
+        "description": "Um aplicativo BSS corporativo gerenciando fluxos de trabalho de telecomunicações, ciclos de vida de assinantes e lógicas complexas de faturamento. Arquitetura frontend escalável com lazy loading, busca de dados moderna e rigoroso controle de acesso baseado em funções usando o sistema de design Metronic 9."
+      },
+      {
+        "title": "CRM360 e Call Center da Telkomcel",
+        "description": "Reformulação do sistema CRM360 e Call Center para a Telkomcel. Integração de APIs usando Swagger e resolução de problemas de frontend através de correção de bugs."
+      },
+      {
+        "title": "Sistema de Informação Hospitalar Saúde",
+        "description": "Desenvolvimento de interfaces de administração de saúde para o Ministério da Saúde, Timor-Leste. Implementação de traduções i18n em Português e Tétum, juntamente com vários módulos de logística."
+      },
+      {
+        "title": "Painel Web BRI TL",
+        "description": "Contribuição para o desenvolvimento frontend de um painel bancário e relacionado a pagamentos, estabelecendo terminologias padronizadas para a filial do Bank Rakyat Indonesia em Timor-Leste."
+      }
+    ]
+  },
+  "education": {
+    "sectionLabel": "Minha jornada",
+    "sectionTitle": "Educação &",
+    "sectionTitleSpan": "Experiência",
+    "eduTitle": "Educação",
+    "expTitle": "Experiência",
+    "items": [
+      {
+        "period": "Set 2023 - Presente",
+        "degree": "Sistemas de Informação — Concentração: ERP",
+        "institution": "President University",
+        "description": "Atualmente cursando bacharelado em Sistemas de Informação. Ensino ministrado em Inglês.",
+        "achievements": [
+          "Bolsa de Estudos de Graduação ASEAN"
+        ]
+      },
+      {
+        "period": "2018 - Dez 2022",
+        "degree": "Ensino Secundário",
+        "institution": "Colégio Paulo VI",
+        "description": "Concluiu o ensino médio e formou-se em Dezembro de 2022. Recebeu educação no idioma Tétum."
+      },
+      {
+        "period": "2008 - 2018",
+        "degree": "Ensino Básico",
+        "institution": "Escola Portuguesa de Díli",
+        "description": "Concluiu do Jardim de Infância ao 8º ano. Recebeu educação bilíngue em Português."
+      }
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "period": "Jan 2025 - Jun 2025",
+        "position": "Estagiário de Desenvolvimento Frontend",
+        "organization": "PT Shibly Teknologi Solusi",
+        "description": "Desenvolveu sistemas frontend corporativos para a plataforma BSS da Telkomcel, painel web do BRI Timor-Leste e o HIS Saúde do Ministério da Saúde. Trabalhou com React, TypeScript e Tailwind CSS em projetos de clientes de alto nível."
+      },
+      {
+        "period": "Outubro 2024 - Outubro 2025",
+        "position": "Secretário I",
+        "organization": "Associação de Estudantes Timorenses da President University",
+        "description": "Gerenciou tarefas administrativas, organizou atas de reuniões e coordenou a comunicação entre os membros da associação."
+      },
+      {
+        "period": "Outubro 2024 - Outubro 2025",
+        "position": "Vice-Presidente II",
+        "organization": "Associação da Faculdade de Ciência da Computação",
+        "description": "Liderou atividades da associação do corpo docente, organizou eventos técnicos e defendeu o bem-estar dos alunos dentro da Faculdade de Ciência da Computação."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Vamos nos conectar",
+    "sectionTitle": "Entre em",
+    "sectionTitleSpan": "Contato",
+    "form": {
+      "name": "Seu Nome",
+      "email": "Seu Email",
+      "message": "Sua Mensagem",
+      "send": "Enviar Mensagem"
+    }
+  }
+}

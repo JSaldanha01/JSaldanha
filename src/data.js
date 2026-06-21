@@ -39,7 +39,7 @@ export const portfolioData = {
   languages: [
     { name: "English", level: "Upper-Intermediate", detail: "IELTS 6.5 • CEFR B2", flagCode: "us" },
     { name: "Tetun", level: "Native", detail: "Mother tongue", flagCode: "tl" },
-    { name: "Portuguese", level: "Intermediate", detail: "School education", flagCode: "pt" },
+    { name: "Portugues", level: "Intermediate", detail: "School education", flagCode: "pt" },
     { name: "Bahasa Indonesia", level: "Intermediate", detail: "Daily use", flagCode: "id" }
   ],
 

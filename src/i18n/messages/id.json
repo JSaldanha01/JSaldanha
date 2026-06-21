@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "education": "Pendidikan",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Halo, saya",
+    "title": "Mahasiswa Sistem Informasi",
+    "description": "Bersemangat tentang teknologi, pengembangan perangkat lunak, dan menciptakan solusi inovatif. Saat ini sedang mengejar gelar Sistem Informasi dengan fokus pada pengembangan full-stack dan arsitektur sistem.",
+    "viewWork": "Lihat Karya Saya",
+    "downloadCv": "Unduh CV",
+    "findMe": "Temukan saya di",
+    "stats": {
+      "gpa": "IPK",
+      "projects": "Proyek",
+      "languages": "Bahasa",
+      "ielts": "IELTS 6.5"
+    }
+  },
+  "about": {
+    "sectionLabel": "Siapa saya",
+    "sectionTitle": "Tentang",
+    "sectionTitleSpan": "Saya",
+    "text": [
+      "Saya adalah mahasiswa Sistem Informasi dari Timor-Leste dengan hasrat yang kuat untuk teknologi dan pengembangan perangkat lunak. Perjalanan internasional saya — dari Sekolah Portugis Dili ke President University di Indonesia dengan Beasiswa ASEAN — telah membentuk saya menjadi pengembang yang tanggap dan berwawasan global.",
+      "Saya berspesialisasi dalam pengembangan frontend dan backend, dengan pengalaman industri langsung dalam membangun sistem skala perusahaan untuk infrastruktur BSS inti Telkomcel, Kementerian Kesehatan Timor-Leste, dan Bank Rakyat Indonesia TL. Latar belakang akademik saya di ERP dan Sistem Informasi memberi saya fondasi yang kuat untuk merancang solusi dunia nyata yang dapat diskalakan.",
+      "Saat saya tidak membuat kode, saya menikmati fotografi, pengeditan video, dan mengeksplorasi teknologi baru. Saya juga menjabat sebagai Sekretaris I Asosiasi Mahasiswa Timor dan Wakil Ketua Fakultas Ilmu Komputer — peran yang telah mempertajam kepemimpinan dan keterampilan komunikasi saya."
+    ],
+    "stats": {
+      "scholar": "Penerima Beasiswa",
+      "gpa": "IPK / 4.00",
+      "english": "Inggris · IELTS 6.5",
+      "from": "Dari Timor-Leste"
+    },
+    "languagesTitle": "Bahasa"
+  },
+  "skills": {
+    "sectionLabel": "Apa yang saya gunakan",
+    "sectionTitle": "Keahlian &",
+    "sectionTitleSpan": "Teknologi"
+  },
+  "projects": {
+    "sectionLabel": "Apa yang telah saya buat",
+    "sectionTitle": "Proyek",
+    "sectionTitleSpan": "Unggulan",
+    "capstone": "Proyek Akhir",
+    "liveDemo": "Lihat Demo",
+    "items": [
+      {
+        "title": "Sistem Manajemen Universitas (JSU-UMS)",
+        "description": "Proyek Akhir: Platform pendidikan full-stack yang komprehensif untuk administrasi akademik. Dibangun dengan Laravel 11 dan di-deploy di VPS cloud LEMP stack yang aman. Fitur CI/CD otomatis, observabilitas waktu nyata via Prometheus/Grafana, dan pemrosesan latar belakang berkinerja tinggi."
+      },
+      {
+        "title": "Implementasi ERP Epicor Kinetic",
+        "description": "Proyek akhir individu: Mengimplementasikan Epicor Kinetic ERP untuk perusahaan manufaktur pensil yang disimulasikan. Mengeksekusi siklus bisnis Make-to-Order penuh meliputi Manajemen Material, Pembelian, Produksi, Pengiriman, Penagihan, dan Penerimaan Kas."
+      },
+      {
+        "title": "Aplikasi Seluler PU IS",
+        "description": "Memimpin proposal dan desain aplikasi seluler Flutter + Firebase untuk Asosiasi Mahasiswa Sistem Informasi PU. Menguraikan fitur termasuk Google Sign-In, otentikasi email, dan pembaruan Cloud Firestore secara real-time."
+      },
+      {
+        "title": "Portal Web Telkomcel OCS",
+        "description": "Aplikasi BSS perusahaan yang mengelola alur kerja telekomunikasi, siklus hidup pelanggan, dan logika penagihan kompleks. Merekayasa arsitektur frontend yang dapat diskalakan dengan lazy loading, pengambilan data modern, dan kontrol akses berbasis peran yang ketat menggunakan sistem desain Metronic 9."
+      },
+      {
+        "title": "Telkomcel CRM360 & Call Center",
+        "description": "Merombak sistem CRM360 dan Call Center untuk Telkomcel. Mengintegrasikan API menggunakan Swagger dan menyelesaikan masalah frontend melalui perbaikan bug."
+      },
+      {
+        "title": "Sistem Informasi Rumah Sakit Saúde",
+        "description": "Mengembangkan antarmuka administrasi perawatan kesehatan untuk Kementerian Kesehatan, Timor-Leste. Menerapkan terjemahan i18n Portugis dan Tetum, bersama dengan berbagai modul logistik."
+      },
+      {
+        "title": "Dasbor Web BRI TL",
+        "description": "Berkontribusi pada pengembangan frontend untuk Dashboard perbankan dan pembayaran, menetapkan terminologi standar untuk Bank Rakyat Indonesia Cabang Timor-Leste."
+      }
+    ]
+  },
+  "education": {
+    "sectionLabel": "Perjalanan saya",
+    "sectionTitle": "Pendidikan &",
+    "sectionTitleSpan": "Pengalaman",
+    "eduTitle": "Pendidikan",
+    "expTitle": "Pengalaman",
+    "items": [
+      {
+        "period": "Sep 2023 - Sekarang",
+        "degree": "Sistem Informasi — Konsentrasi: ERP",
+        "institution": "President University",
+        "description": "Saat ini sedang menempuh gelar Sarjana Sistem Informasi. Menerima pendidikan dalam bahasa Inggris.",
+        "achievements": [
+          "Penghargaan Beasiswa Sarjana ASEAN"
+        ]
+      },
+      {
+        "period": "2018 - Des 2022",
+        "degree": "Ijazah Sekolah Menengah Atas",
+        "institution": "Colégio Paulo VI",
+        "description": "Menyelesaikan pendidikan sekolah menengah dan lulus pada Desember 2022. Menerima pendidikan dalam bahasa Tetum."
+      },
+      {
+        "period": "2008 - 2018",
+        "degree": "Sekolah Menengah Pertama",
+        "institution": "Sekolah Portugis Dili",
+        "description": "Menyelesaikan Taman Kanak-kanak hingga Kelas 8. Menerima pendidikan dwibahasa dalam bahasa Portugis."
+      }
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "period": "Jan 2025 - Jun 2025",
+        "position": "Magang Frontend Developer",
+        "organization": "PT Shibly Teknologi Solusi",
+        "description": "Mengembangkan sistem frontend perusahaan untuk platform BSS inti Telkomcel, dasbor web BRI Timor-Leste, dan HIS Saúde Kementerian Kesehatan. Bekerja dengan React, TypeScript, dan Tailwind CSS."
+      },
+      {
+        "period": "Oktober 2024 - Oktober 2025",
+        "position": "Sekretaris I",
+        "organization": "Asosiasi Mahasiswa Timor President University",
+        "description": "Mengelola tugas administratif, menyusun notulen rapat, dan mengoordinasikan komunikasi antar anggota."
+      },
+      {
+        "period": "Oktober 2024 - Oktober 2025",
+        "position": "Wakil Ketua II",
+        "organization": "Asosiasi Fakultas Ilmu Komputer",
+        "description": "Memimpin aktivitas asosiasi fakultas, menyelenggarakan acara teknis, dan mengadvokasi kesejahteraan mahasiswa."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Mari terhubung",
+    "sectionTitle": "Hubungi",
+    "sectionTitleSpan": "Saya",
+    "form": {
+      "name": "Nama Anda",
+      "email": "Email Anda",
+      "message": "Pesan Anda",
+      "send": "Kirim Pesan"
+    }
+  }
+}

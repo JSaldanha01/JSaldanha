@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Varanda",
+    "about": "Kona-ba",
+    "skills": "Abitidade",
+    "projects": "Projetu",
+    "education": "Edukasaun",
+    "contact": "Kontaktu"
+  },
+  "hero": {
+    "greeting": "Ola, ha'u mak",
+    "title": "Estudante Sistema Informasaun",
+    "description": "Pasionadu ba teknolojia, dezenvolvimentu software nian, no kria solusaun inovativu. Agora dadaun foti ha'u-nia grau iha Sistema Informasaun ho foku ba dezenvolvimentu full-stack no arkitetura sistema.",
+    "viewWork": "Haree Ha'u-nia Servisu",
+    "downloadCv": "Deskarga CV",
+    "findMe": "Haree ha'u iha",
+    "stats": {
+      "gpa": "GPA",
+      "projects": "Projetu",
+      "languages": "Lian",
+      "ielts": "IELTS 6.5"
+    }
+  },
+  "about": {
+    "sectionLabel": "Sée mak ha'u",
+    "sectionTitle": "Kona-ba",
+    "sectionTitleSpan": "Ha'u",
+    "text": [
+      "Ha'u mak estudante Sistema Informasaun husi Timor-Leste ne'ebé iha paixaun maka'as ba teknolojia no dezenvolvimentu software. Ha'u-nia jornada internasionál — husi Escola Portuguesa de Díli to'o President University iha Indonézia liu husi Bolsa ASEAN — forma ona ha'u sai dezenvolvedór ne'ebé bele adapta an no iha mentalidade globál.",
+      "Ha'u espesializa iha dezenvolvimentu frontend no backend, ho esperiénsia prátika iha indústria harii sistema nível emprezariál ba infraestrutura BSS Telkomcel nian, Ministériu Saúde Timor-Leste, no Bank Rakyat Indonesia TL. Ha'u-nia fundasaun akadémika iha ERP no Sistema Informasaun fó baze forte mai ha'u hodi dezenha solusaun ne'ebé boot ba mundu reál.",
+      "Bainhira ha'u la halo kodigu, ha'u gosta fotografia, edita vídeu, no esplora teknolojia foun. Ha'u mós serbí nu'udar Sekretáriu I iha Asosiasaun Estudante Timoroan no Vise Prezidente iha Asosiasaun Fakuldade Siénsia Komputadór — knaar sira ne'ebé hasa'e ha'u-nia abilidade lideransa no komunikasaun."
+    ],
+    "stats": {
+      "scholar": "Bolseiru",
+      "gpa": "GPA / 4.00",
+      "english": "Inglés · IELTS 6.5",
+      "from": "Husi Timor-Leste"
+    },
+    "languagesTitle": "Lian sira"
+  },
+  "skills": {
+    "sectionLabel": "Saida mak ha'u uza",
+    "sectionTitle": "Abitidade &",
+    "sectionTitleSpan": "Teknolojia"
+  },
+  "projects": {
+    "sectionLabel": "Saida mak ha'u harii ona",
+    "sectionTitle": "Projetu",
+    "sectionTitleSpan": "Destaque",
+    "capstone": "Projetu Finál",
+    "liveDemo": "Haree Ao Vivo",
+    "items": [
+      {
+        "title": "Sistema Jestaun Universidade (JSU-UMS)",
+        "description": "Projetu Finál: Plataforma edukasionál full-stack ida ba administrasaun akadémika. Harii ho Laravel 11 no halo deploy iha VPS cloud LEMP stack ne'ebé seguru. Iha CI/CD automátiku, observabilidade tempu reál liu husi Prometheus/Grafana, no prosesamentu background ho dezempeñu aas."
+      },
+      {
+        "title": "Implementasaun ERP Epicor Kinetic",
+        "description": "Projetu individuál: Implementa ERP Epicor Kinetic ba kompañia manufatura lapis nian ne'ebé simuladu. Ezekuta siklu negósiu Make-to-Order tomak inklui Jestaun Materiál, Kompra, Produsaun, Entrega, Faturasaun no Resesaun Osan."
+      },
+      {
+        "title": "Aplikasaun Mobile PU IS",
+        "description": "Lidera proposta no dezenhu aplikasaun mobile Flutter + Firebase ba Asosiasaun Estudante Sistema Informasaun PU. Destaka karakterístika sira inklui Google Sign-In, autentikasaun email, no atualizasaun Cloud Firestore iha tempu reál."
+      },
+      {
+        "title": "Portal Web Telkomcel OCS",
+        "description": "Aplikasaun BSS emprezariál ida ne'ebé jere fluxu traballu telekomunikasaun, siklu vida kliente, no lójika faturasaun ne'ebé kompleksu. Dezenha arkitetura frontend ne'ebé bele aumenta ho lazy loading no kontrolu asesu bazeia ba knaar."
+      },
+      {
+        "title": "Telkomcel CRM360 & Call Center",
+        "description": "Hadi'a sistema CRM360 no Call Center ba Telkomcel. Integra API sira uza Swagger no rezolve problema frontend liu husi hadi'a bug sira."
+      },
+      {
+        "title": "Sistema Informasaun Ospitál Saúde",
+        "description": "Dezenvolve interfas administrasaun saúde ba Ministériu Saúde, Timor-Leste. Implementa tradusaun i18n iha Portugés no Tetum, hamutuk ho modulu lójistika oin-oin."
+      },
+      {
+        "title": "Dashboard Web BRI TL",
+        "description": "Kontribui ba dezenvolvimentu frontend ba Dashboard bankária nian, estabelese terminolojia padronizada ba Bank Rakyat Indonesia Sukursál Timor-Leste."
+      }
+    ]
+  },
+  "education": {
+    "sectionLabel": "Ha'u-nia jornada",
+    "sectionTitle": "Edukasaun &",
+    "sectionTitleSpan": "Esperiénsia",
+    "eduTitle": "Edukasaun",
+    "expTitle": "Esperiénsia",
+    "items": [
+      {
+        "period": "Set 2023 - Agora",
+        "degree": "Sistema Informasaun — Konsentrasaun: ERP",
+        "institution": "President University",
+        "description": "Agora dadaun foti Lisensiatura iha Sistema Informasaun. Simu edukasaun iha lian Inglés.",
+        "achievements": [
+          "Prémitu Bolsa ASEAN"
+        ]
+      },
+      {
+        "period": "2018 - Dez 2022",
+        "degree": "Diploma Ensinu Sekundáriu",
+        "institution": "Colégio Paulo VI",
+        "description": "Remata edukasaun ensinu sekundáriu iha Dezembru 2022. Simu edukasaun iha lian Tetun."
+      },
+      {
+        "period": "2008 - 2018",
+        "degree": "Ensinu Báziku",
+        "institution": "Escola Portuguesa de Díli",
+        "description": "Remata Pre-Eskolár to'o 8º anu. Simu edukasaun bilingue iha Portugés."
+      }
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "period": "Jan 2025 - Jun 2025",
+        "position": "Estajiáriu Dezenvolvedór Frontend",
+        "organization": "PT Shibly Teknologi Solusi",
+        "description": "Dezenvolve sistema frontend emprezariál ba plataforma BSS Telkomcel nian, dashboard web BRI Timor-Leste, no HIS Saúde Ministériu Saúde nian."
+      },
+      {
+        "period": "Outubru 2024 - Outubru 2025",
+        "position": "Sekretáriu I",
+        "organization": "Asosiasaun Estudante Timoroan President University",
+        "description": "Jere serbisu administrativu, organiza nota reuniaun, no koordena komunikasaun entre membru sira."
+      },
+      {
+        "period": "Outubru 2024 - Outubru 2025",
+        "position": "Vise Prezidente II",
+        "organization": "Asosiasaun Fakuldade Siénsia Komputadór",
+        "description": "Lidera atividade asosiasaun nian, organiza eventu tékniku, no defende di'ak estudante sira iha Fakuldade nia laran."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Mai ita liga malu",
+    "sectionTitle": "Kontaktu",
+    "sectionTitleSpan": "Ha'u",
+    "form": {
+      "name": "Ita-nia Naran",
+      "email": "Ita-nia Email",
+      "message": "Ita-nia Mensajen",
+      "send": "Haruka Mensajen"
+    }
+  }
+}

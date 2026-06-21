@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { portfolioData } from '../data';
 import profileImg from '../assets/profile.jpg';
+import LanguageSwitcher from './LanguageSwitcher';
+import emailjs from '@emailjs/browser';
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,7 +12,36 @@ const Home = () => {
   const [displayedTitle, setDisplayedTitle] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [activeCard, setActiveCard] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
   const carouselRef = useRef(null);
+  const formRef = useRef(null);
+
+  const { t, i18n } = useTranslation();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+      .then((result) => {
+        setSubmitStatus('success');
+        setIsSubmitting(false);
+        e.target.reset();
+        setTimeout(() => setSubmitStatus(null), 5000);
+      }, (error) => {
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        setTimeout(() => setSubmitStatus(null), 5000);
+      });
+  };
 
   // Typewriter effect
   useEffect(() => {
@@ -108,11 +140,13 @@ const Home = () => {
                   className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.name}
+                  {t(`nav.${link.name.toLowerCase()}`)}
                 </a>
               </li>
             ))}
           </ul>
+
+          <LanguageSwitcher />
           <div
             className={`hamburger ${isMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -131,7 +165,7 @@ const Home = () => {
 
             {/* Main card */}
             <div className="hero-main-card reveal">
-              <p className="hero-greeting">{portfolioData.greeting}</p>
+              <p className="hero-greeting">{t('hero.greeting')}</p>
               <h1 className="hero-name">{portfolioData.name}</h1>
               <h2 className="hero-title">
                 {displayedTitle}<span className="cursor">|</span>
@@ -139,10 +173,10 @@ const Home = () => {
               <p className="hero-desc">{portfolioData.description}</p>
               <div className="hero-actions">
                 <a href="#projects" className="btn btn-primary">
-                  <i className="fas fa-rocket"></i> View My Work
+                  <i className="fas fa-rocket"></i> {t('hero.viewWork')}
                 </a>
                 <a href="/cv.pdf" download className="btn btn-secondary">
-                  <i className="fas fa-download"></i> Download CV
+                  <i className="fas fa-download"></i> {t('hero.downloadCv')}
                 </a>
               </div>
             </div>
@@ -154,7 +188,7 @@ const Home = () => {
 
             {/* Social card */}
             <div className="hero-social-card reveal reveal-d2">
-              <p className="social-label">Find me on</p>
+              <p className="social-label">{t('hero.findMe')}</p>
               <div className="social-icons-row">
                 {portfolioData.socials.map((s, i) => (
                   <a key={i} href={s.url} target="_blank" rel="noreferrer" className="social-icon" title={s.label}>
@@ -168,19 +202,19 @@ const Home = () => {
             <div className="hero-stats-card reveal reveal-d3">
               <div className="stat-item">
                 <span className="stat-number">3.44</span>
-                <span className="stat-label">GPA</span>
+                <span className="stat-label">{t('hero.stats.gpa')}</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">5+</span>
-                <span className="stat-label">Enterprise Projects</span>
+                <span className="stat-label">{t('hero.stats.projects')}</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">4</span>
-                <span className="stat-label">Languages</span>
+                <span className="stat-label">{t('hero.stats.languages')}</span>
               </div>
               <div className="stat-item">
                 <span className="stat-number">B2</span>
-                <span className="stat-label">IELTS 6.5</span>
+                <span className="stat-label">{t('hero.stats.ielts')}</span>
               </div>
             </div>
 
@@ -189,21 +223,21 @@ const Home = () => {
 
         {/* ── ABOUT ── */}
         <section id="about">
-          <p className="section-label reveal">Who I am</p>
-          <h2 className="section-heading reveal reveal-d1">About <span>Me</span></h2>
+          <p className="section-label reveal">{t('about.sectionLabel')}</p>
+          <h2 className="section-heading reveal reveal-d1">{t('about.sectionTitle')} <span>{t('about.sectionTitleSpan')}</span></h2>
 
           <div className="about-bento">
             <div className="about-text-card reveal reveal-d2">
-              {portfolioData.about.text.map((para, i) => (
+              {t('about.text', { returnObjects: true }).map((para, i) => (
                 <p key={i} className="about-paragraph">{para}</p>
               ))}
             </div>
             <div className="about-stats-col">
               {[
-                { num: 'ASEAN', label: 'Undergraduate Scholar' },
-                { num: '3.56', label: 'GPA / 4.00' },
-                { num: 'B2', label: 'English · IELTS 6.5' },
-                { num: '🇹🇱', label: 'From Timor-Leste' },
+                { num: 'ASEAN', label: t('about.stats.scholar') },
+                { num: '3.56', label: t('about.stats.gpa') },
+                { num: 'B2', label: t('about.stats.english') },
+                { num: '🇹🇱', label: t('about.stats.from') },
               ].map((s, i) => (
                 <div key={i} className={`about-stat-card reveal reveal-d${i + 2}`}>
                   <span className="stat-number">{s.num}</span>
@@ -216,7 +250,7 @@ const Home = () => {
           {/* Languages */}
           {portfolioData.languages && (
             <div style={{ marginTop: '2.5rem' }}>
-              <p className="section-label reveal" style={{ marginBottom: '1.25rem' }}>Languages</p>
+              <p className="section-label reveal" style={{ marginBottom: '1.25rem' }}>{t('about.languagesTitle')}</p>
               <div className="languages-grid">
                 {portfolioData.languages.map((lang, i) => (
                   <div key={i} className={`language-card reveal reveal-d${i + 1}`}>
@@ -239,8 +273,8 @@ const Home = () => {
 
         {/* ── SKILLS ── */}
         <section id="skills">
-          <p className="section-label reveal">What I work with</p>
-          <h2 className="section-heading reveal reveal-d1">Skills & <span>Technologies</span></h2>
+          <p className="section-label reveal">{t('skills.sectionLabel')}</p>
+          <h2 className="section-heading reveal reveal-d1">{t('skills.sectionTitle')} <span>{t('skills.sectionTitleSpan')}</span></h2>
           <div className="skills-categories">
             {Object.entries(skillGroups).map(([cat, skills], gi) => (
               <div key={cat} className={`skill-group reveal reveal-d${Math.min(gi + 1, 4)}`}>
@@ -263,31 +297,24 @@ const Home = () => {
 
         {/* ── PROJECTS ── */}
         <section id="projects">
-          <p className="section-label reveal">What I&apos;ve built</p>
-          <h2 className="section-heading reveal reveal-d1">Featured <span>Projects</span></h2>
+          <p className="section-label reveal">{t('projects.sectionLabel')}</p>
+          <h2 className="section-heading reveal reveal-d1">{t('projects.sectionTitle')} <span>{t('projects.sectionTitleSpan')}</span></h2>
 
           <div className="projects-carousel" ref={carouselRef}>
             {portfolioData.projects.map((project, index) => (
               <div key={index} className={`project-card reveal ${index === 0 ? 'featured' : ''}`}>
                 {index === 0 && (
                   <span className="featured-badge">
-                    <i className="fas fa-star"></i> Capstone Project
+                    <i className="fas fa-star"></i> {t('projects.capstone')}
                   </span>
                 )}
                 <i className={`${project.icon} project-icon`}></i>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-desc">{project.description}</p>
+                <h3 className="project-title">{t(`projects.items.${index}.title`, { defaultValue: project.title })}</h3>
+                <p className="project-desc">{t(`projects.items.${index}.description`, { defaultValue: project.description })}</p>
                 <div className="project-tags">
                   {project.tags.map(tag => (
                     <span key={tag} className="tag">{tag}</span>
                   ))}
-                </div>
-                <div className="project-links-row">
-                  {project.links?.demo && project.links.demo !== '#' && (
-                    <a href={project.links.demo} target="_blank" rel="noreferrer" className="project-link-btn">
-                      Live Demo <i className="fas fa-external-link-alt"></i>
-                    </a>
-                  )}
                 </div>
               </div>
             ))}
@@ -310,22 +337,22 @@ const Home = () => {
 
         {/* ── EDUCATION & EXPERIENCE ── */}
         <section id="education">
-          <p className="section-label reveal">My journey</p>
-          <h2 className="section-heading reveal reveal-d1">Education & <span>Experience</span></h2>
+          <p className="section-label reveal">{t('education.sectionLabel')}</p>
+          <h2 className="section-heading reveal reveal-d1">{t('education.sectionTitle')} <span>{t('education.sectionTitleSpan')}</span></h2>
 
           <div className="timeline-grid">
             {/* Education column */}
             <div>
               <p className="timeline-col-title reveal">
-                <i className="fas fa-graduation-cap"></i> Education
+                <i className="fas fa-graduation-cap"></i> {t('education.eduTitle')}
               </p>
               {portfolioData.education.map((item, i) => (
                 <div key={i} className={`timeline-entry reveal reveal-d${i + 1}`}>
-                  <p className="timeline-period">{item.period}</p>
-                  <h3 className="timeline-title">{item.degree}</h3>
-                  <p className="timeline-sub">{item.institution}</p>
-                  <p className="timeline-desc">{item.description}</p>
-                  {item.achievements?.map((a, j) => (
+                  <p className="timeline-period">{t(`education.items.${i}.period`, { defaultValue: item.period })}</p>
+                  <h3 className="timeline-title">{t(`education.items.${i}.degree`, { defaultValue: item.degree })}</h3>
+                  <p className="timeline-sub">{t(`education.items.${i}.institution`, { defaultValue: item.institution })}</p>
+                  <p className="timeline-desc">{t(`education.items.${i}.description`, { defaultValue: item.description })}</p>
+                  {item.achievements && t(`education.items.${i}.achievements`, { returnObjects: true, defaultValue: item.achievements }).map((a, j) => (
                     <span key={j} className="timeline-badge">
                       <i className="fas fa-award"></i> {a}
                     </span>
@@ -337,14 +364,14 @@ const Home = () => {
             {/* Experience column */}
             <div>
               <p className="timeline-col-title reveal">
-                <i className="fas fa-briefcase"></i> Experience
+                <i className="fas fa-briefcase"></i> {t('education.expTitle')}
               </p>
               {portfolioData.experience.map((exp, i) => (
                 <div key={i} className={`timeline-entry reveal reveal-d${i + 1}`}>
-                  <p className="timeline-period">{exp.period}</p>
-                  <h3 className="timeline-title">{exp.position}</h3>
-                  <p className="timeline-sub">{exp.organization}</p>
-                  <p className="timeline-desc">{exp.description}</p>
+                  <p className="timeline-period">{t(`experience.items.${i}.period`, { defaultValue: exp.period })}</p>
+                  <h3 className="timeline-title">{t(`experience.items.${i}.position`, { defaultValue: exp.position })}</h3>
+                  <p className="timeline-sub">{t(`experience.items.${i}.organization`, { defaultValue: exp.organization })}</p>
+                  <p className="timeline-desc">{t(`experience.items.${i}.description`, { defaultValue: exp.description })}</p>
                 </div>
               ))}
             </div>
@@ -353,8 +380,8 @@ const Home = () => {
 
         {/* ── CONTACT ── */}
         <section id="contact">
-          <p className="section-label reveal">Let&apos;s connect</p>
-          <h2 className="section-heading reveal reveal-d1">Get In <span>Touch</span></h2>
+          <p className="section-label reveal">{t('contact.sectionLabel')}</p>
+          <h2 className="section-heading reveal reveal-d1">{t('contact.sectionTitle')} <span>{t('contact.sectionTitleSpan')}</span></h2>
 
           <div className="contact-bento">
             <div className="contact-info-stack">
@@ -381,23 +408,24 @@ const Home = () => {
             </div>
 
             <form
+              ref={formRef}
               className="contact-form-card reveal reveal-d2"
-              action={`mailto:${portfolioData.contact.email}`}
-              method="POST"
-              encType="text/plain"
+              onSubmit={sendEmail}
             >
               <div className="form-group">
-                <input type="text" name="name" placeholder="Your Name" required className="form-input" />
+                <input type="text" name="name" placeholder={t('contact.form.name')} required className="form-input" />
               </div>
               <div className="form-group">
-                <input type="email" name="email" placeholder="Your Email" required className="form-input" />
+                <input type="email" name="email" placeholder={t('contact.form.email')} required className="form-input" />
               </div>
               <div className="form-group">
-                <textarea name="message" rows="5" placeholder="Your Message" required className="form-input"></textarea>
+                <textarea name="message" rows="5" placeholder={t('contact.form.message')} required className="form-input"></textarea>
               </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                Send Message <i className="fas fa-paper-plane"></i>
+              <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : t('contact.form.send')} <i className={isSubmitting ? "fas fa-spinner fa-spin" : "fas fa-paper-plane"}></i>
               </button>
+              {submitStatus === 'success' && <p style={{ color: '#10b981', marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem' }}>Message sent successfully!</p>}
+              {submitStatus === 'error' && <p style={{ color: '#ef4444', marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem' }}>Failed to send message. Please try again.</p>}
             </form>
           </div>
         </section>
@@ -407,7 +435,7 @@ const Home = () => {
       <footer className="footer-section">
         <div className="footer-container">
           <p className="footer-left">
-            © {new Date().getFullYear()} <span>{portfolioData.name}</span>. Built with React & ❤️
+            © {new Date().getFullYear()} <span>{portfolioData.name}</span>.
           </p>
           <div className="footer-socials">
             {portfolioData.socials.map((s, i) => (
