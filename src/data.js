@@ -139,6 +139,31 @@ export const portfolioData = {
       description: "Completed Kindergarten through Grade 8. Received bilingual education in Portuguese."
     }
   ],
+
+  certificates: [
+    {
+      title: "Gemini Certified Student",
+      issuer: "Google for Education",
+      date: "06/24/2026",
+      status: "Valid through 06/24/2029",
+      icon: "fab fa-google",
+      image: "src/assets/Gemini_Certification.png",
+      url: "https://example.com", // <--- Add your certificate link here!
+    },
+    {
+      title: "Mikrotik MTCNA",
+      issuer: "Mikrotik",
+      status: "Pending",
+      icon: "fas fa-route",
+    },
+    {
+      title: "Mikrotik MTCRE",
+      issuer: "Mikrotik",
+      status: "Pending",
+      icon: "fas fa-route",
+    }
+  ],
+
   contact: {
     email: "joaozinho@jsaldanha.com",
     phone: "+62 852 8026 3820",

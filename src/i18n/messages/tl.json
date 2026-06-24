@@ -132,6 +132,11 @@
       }
     ]
   },
+  "certificates": {
+    "sectionLabel": "Hau nia kualifikasaun",
+    "sectionTitle": "Lisensa &",
+    "sectionTitleSpan": "Sertifikadu"
+  },
   "contact": {
     "sectionLabel": "Mai ita liga malu",
     "sectionTitle": "Kontaktu",

@@ -132,6 +132,11 @@
       }
     ]
   },
+  "certificates": {
+    "sectionLabel": "Kualifikasi saya",
+    "sectionTitle": "Lisensi &",
+    "sectionTitleSpan": "Sertifikasi"
+  },
   "contact": {
     "sectionLabel": "Mari terhubung",
     "sectionTitle": "Hubungi",

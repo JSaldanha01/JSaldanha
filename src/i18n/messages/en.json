@@ -132,6 +132,11 @@
       }
     ]
   },
+  "certificates": {
+    "sectionLabel": "My qualifications",
+    "sectionTitle": "Licenses &",
+    "sectionTitleSpan": "Certifications"
+  },
   "contact": {
     "sectionLabel": "Let's connect",
     "sectionTitle": "Get In",

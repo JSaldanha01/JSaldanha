@@ -14,6 +14,7 @@ const Home = () => {
   const [activeCard, setActiveCard] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [selectedCertImage, setSelectedCertImage] = useState(null);
 
   const carouselRef = useRef(null);
   const formRef = useRef(null);
@@ -378,6 +379,55 @@ const Home = () => {
           </div>
         </section>
 
+        {/* ── CERTIFICATES ── */}
+        {portfolioData.certificates && (
+          <section id="certificates" style={{ marginTop: '2rem' }}>
+            <p className="section-label reveal">{t('certificates.sectionLabel', { defaultValue: 'My qualifications' })}</p>
+            <h2 className="section-heading reveal reveal-d1">{t('certificates.sectionTitle', { defaultValue: 'Licenses &' })} <span>{t('certificates.sectionTitleSpan', { defaultValue: 'Certifications' })}</span></h2>
+
+            <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+              {portfolioData.certificates.map((cert, i) => {
+                const CardWrapper = cert.url ? 'a' : 'div';
+                return (
+                  <CardWrapper
+                    key={i}
+                    href={cert.url}
+                    target={cert.url ? "_blank" : undefined}
+                    rel={cert.url ? "noreferrer" : undefined}
+                    className={`timeline-entry reveal reveal-d${(i % 3) + 1}`}
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '10px',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      cursor: cert.url ? 'pointer' : 'default'
+                    }}
+                  >
+                    {cert.image && (
+                      <img
+                        src={cert.image}
+                        alt={cert.title}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setSelectedCertImage(cert.image);
+                        }}
+                        style={{ width: '100%', borderRadius: '8px', objectFit: 'cover', marginBottom: '10px', cursor: 'zoom-in' }}
+                      />
+                    )}
+                    <div>
+                      <p className="timeline-period">{cert.date ? `${cert.date} · ${cert.status}` : cert.status}</p>
+                      <h3 className="timeline-title"><i className={cert.icon} style={{ marginRight: '8px' }}></i>{cert.title}</h3>
+                      <p className="timeline-sub">{cert.issuer}</p>
+                    </div>
+                  </CardWrapper>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
         {/* ── CONTACT ── */}
         <section id="contact">
           <p className="section-label reveal">{t('contact.sectionLabel')}</p>
@@ -446,6 +496,54 @@ const Home = () => {
           </div>
         </div>
       </footer>
+
+      {/* ── IMAGE MODAL ── */}
+      {selectedCertImage && (
+        <div
+          onClick={() => setSelectedCertImage(null)}
+          style={{
+            position: 'fixed',
+            top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.85)',
+            zIndex: 9999,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '2rem',
+            cursor: 'zoom-out'
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh' }}
+          >
+            <button
+              onClick={() => setSelectedCertImage(null)}
+              style={{
+                position: 'absolute',
+                top: '-40px', right: 0,
+                background: 'none', border: 'none',
+                color: 'white', fontSize: '2rem',
+                cursor: 'pointer'
+              }}
+            >
+              &times;
+            </button>
+            <img
+              src={selectedCertImage}
+              alt="Certificate Full"
+              style={{
+                maxWidth: '100%',
+                maxHeight: '85vh',
+                objectFit: 'contain',
+                borderRadius: '8px',
+                boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                cursor: 'default'
+              }}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
