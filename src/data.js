@@ -147,7 +147,7 @@ export const portfolioData = {
       date: "06/24/2026",
       status: "Valid through 06/24/2029",
       icon: "fab fa-google",
-      image: "src/assets/Gemini_Certification.png",
+      image: "/certificates/Gemini_Certification.png",
       url: "https://example.com", // <--- Add your certificate link here!
     },
     {
