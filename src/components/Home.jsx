@@ -15,6 +15,7 @@ const Home = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [selectedCertImage, setSelectedCertImage] = useState(null);
+  const [selectedEmbedUrl, setSelectedEmbedUrl] = useState(null);
 
   const carouselRef = useRef(null);
   const formRef = useRef(null);
@@ -387,13 +388,9 @@ const Home = () => {
 
             <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
               {portfolioData.certificates.map((cert, i) => {
-                const CardWrapper = cert.url ? 'a' : 'div';
                 return (
-                  <CardWrapper
+                  <div
                     key={i}
-                    href={cert.url}
-                    target={cert.url ? "_blank" : undefined}
-                    rel={cert.url ? "noreferrer" : undefined}
                     className={`timeline-entry reveal reveal-d${(i % 3) + 1}`}
                     style={{
                       display: 'flex',
@@ -401,27 +398,85 @@ const Home = () => {
                       gap: '10px',
                       textDecoration: 'none',
                       color: 'inherit',
-                      cursor: cert.url ? 'pointer' : 'default'
+                      cursor: cert.url || cert.embedUrl || cert.image ? 'pointer' : 'default'
+                    }}
+                    onClick={() => {
+                      if (cert.embedUrl) {
+                        setSelectedEmbedUrl(cert.embedUrl);
+                      } else if (cert.image) {
+                        setSelectedCertImage(cert.image);
+                      } else if (cert.url) {
+                        window.open(cert.url, '_blank', 'noopener,noreferrer');
+                      }
                     }}
                   >
                     {cert.image && (
-                      <img
-                        src={cert.image}
-                        alt={cert.title}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setSelectedCertImage(cert.image);
-                        }}
-                        style={{ width: '100%', borderRadius: '8px', objectFit: 'cover', marginBottom: '10px', cursor: 'zoom-in' }}
-                      />
+                      <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '10px', marginBottom: '12px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                        <img
+                          src={cert.image}
+                          alt={cert.title}
+                          style={{
+                            width: '100%',
+                            height: '210px',
+                            objectFit: 'cover',
+                            display: 'block',
+                            transition: 'transform 0.3s ease'
+                          }}
+                        />
+                        <div style={{
+                          position: 'absolute',
+                          bottom: '10px',
+                          right: '10px',
+                          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                          backdropFilter: 'blur(6px)',
+                          padding: '5px 12px',
+                          borderRadius: '20px',
+                          fontSize: '0.75rem',
+                          color: '#fff',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          border: '1px solid rgba(255, 255, 255, 0.18)',
+                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+                        }}>
+                          <i className="fas fa-search-plus"></i> View Certificate
+                        </div>
+                      </div>
                     )}
-                    <div>
-                      <p className="timeline-period">{cert.date ? `${cert.date} · ${cert.status}` : cert.status}</p>
-                      <h3 className="timeline-title"><i className={cert.icon} style={{ marginRight: '8px' }}></i>{cert.title}</h3>
-                      <p className="timeline-sub">{cert.issuer}</p>
+                    <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                      <div>
+                        <p className="timeline-period">{cert.date ? `${cert.date} · ${cert.status}` : cert.status}</p>
+                        <h3 className="timeline-title"><i className={cert.icon} style={{ marginRight: '8px' }}></i>{cert.title}</h3>
+                        <p className="timeline-sub">{cert.issuer}</p>
+                      </div>
+                      {cert.url && (
+                        <a
+                          href={cert.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            marginTop: '12px',
+                            padding: '6px 12px',
+                            borderRadius: '6px',
+                            backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                            border: '1px solid rgba(56, 189, 248, 0.25)',
+                            color: '#38bdf8',
+                            fontSize: '0.8rem',
+                            fontWeight: 500,
+                            textDecoration: 'none',
+                            width: 'fit-content',
+                            transition: 'all 0.2s ease'
+                          }}
+                        >
+                          Verify Credential <i className="fas fa-external-link-alt" style={{ fontSize: '0.7rem' }}></i>
+                        </a>
+                      )}
                     </div>
-                  </CardWrapper>
+                  </div>
                 );
               })}
             </div>
@@ -540,6 +595,51 @@ const Home = () => {
                 boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
                 cursor: 'default'
               }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* ── EMBED MODAL ── */}
+      {selectedEmbedUrl && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0, left: 0, width: '100%', height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.85)',
+            zIndex: 9999,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '2rem',
+            cursor: 'zoom-out'
+          }}
+          onClick={() => setSelectedEmbedUrl(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ position: 'relative', width: '90vw', maxWidth: '800px', height: '80vh', maxHeight: '600px', backgroundColor: 'transparent' }}
+          >
+            <button
+              onClick={() => setSelectedEmbedUrl(null)}
+              style={{
+                position: 'absolute',
+                top: '-40px', right: 0,
+                background: 'none', border: 'none',
+                color: 'white', fontSize: '2rem',
+                cursor: 'pointer'
+              }}
+            >
+              &times;
+            </button>
+            <iframe
+              src={selectedEmbedUrl}
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              title="Certificate Full"
+              style={{ borderRadius: '8px', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', backgroundColor: '#fff' }}
             />
           </div>
         </div>

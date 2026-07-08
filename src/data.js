@@ -142,23 +142,35 @@ export const portfolioData = {
 
   certificates: [
     {
-      title: "Gemini Certified Student",
+      title: "Gemini Certified University Student",
       issuer: "Google for Education",
-      date: "06/24/2026",
-      status: "Valid through 06/24/2029",
+      date: "06/29/2026",
+      status: "Valid through 06/29/2029",
       icon: "fab fa-google",
-      image: "/certificates/Gemini_Certification.png",
-      url: "https://example.com", // <--- Add your certificate link here!
+      url: "https://edu.google.accredible.com/7ae0f950-ca28-49e2-800b-b989ba356b2d",
+      embedUrl: "https://edu.google.accredible.com/embed/7ae0f950-ca28-49e2-800b-b989ba356b2d",
+      image: "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/186751652",
     },
     {
-      title: "Mikrotik MTCNA",
-      issuer: "Mikrotik",
-      status: "Pending",
-      icon: "fas fa-route",
+      title: "MikroTik Certified Network Associate (MTCNA)",
+      issuer: "MikroTik",
+      date: "July 2026",
+      status: "Certified",
+      icon: "fas fa-network-wired",
+      image: "/Certificate%20MTCNA.jpg",
+      url: "https://mikrotik.com/training/certificates/c730054c94e5a0ab9823",
     },
     {
-      title: "Mikrotik MTCRE",
-      issuer: "Mikrotik",
+      title: "MikroTik MTCNA Training Course",
+      issuer: "IDN Networkers / MikroTik",
+      date: "July 2026",
+      status: "Training Completed",
+      icon: "fas fa-certificate",
+      image: "/Certificate%20MTCNA%20Training%20IDN.jpeg",
+    },
+    {
+      title: "MikroTik Certified Routing Engineer (MTCRE)",
+      issuer: "MikroTik",
       status: "Pending",
       icon: "fas fa-route",
     }
