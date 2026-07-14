@@ -58,7 +58,18 @@ export const portfolioData = {
       description: "Capstone Final Project: A comprehensive full-stack educational platform for academic administration. Built with Laravel 11 and deployed on a secure LEMP stack cloud VPS. Features automated CI/CD, real-time observability via Prometheus/Grafana, and high-performance background processing.",
       tags: ["Laravel", "LEMP Stack", "CI/CD", "Prometheus"],
       links: { github: "https://github.com", live: "https://staging.jsaldanha.com" },
-      icon: "fas fa-graduation-cap"
+      icon: "fas fa-graduation-cap",
+      image: "/Images/JSU_Dashboard.png",
+      images: [
+        "/Images/JSU_Dashboard.png",
+        "/Images/JSU_Portal_Login.png",
+        "/Images/JSU_Enrollment.png",
+        "/Images/JSU_Analytics.png",
+        "/Images/JSU_Attendance_Sessions.png",
+        "/Images/JSU_Attendance_Marking.png",
+        "/Images/JSU_GPA_Report.png",
+        "/Images/JSU_Email_Broadcast.png"
+      ]
     },
     {
       title: "Epicor Kinetic ERP Implementation",
@@ -79,28 +90,32 @@ export const portfolioData = {
       description: "An enterprise BSS application managing telecommunication workflows, subscriber lifecycles, and complex billing logic. Engineered a scalable frontend architecture with lazy loading, modern data fetching, and strict role-based access control using the Metronic 9 design system.",
       tags: ["React", "TypeScript", "Zustand", "Tailwind CSS"],
       links: { github: "https://github.com" },
-      icon: "fas fa-file-invoice-dollar"
+      icon: "fas fa-file-invoice-dollar",
+      image: "/Images/Telkomcel_OCS.png"
     },
     {
-      title: "Telkomcel CRM360 & Call Center",
-      description: "Revamped the CRM360 and Call Center system for Telkomcel. Integrated APIs using Swagger and resolved frontend issues through bug fixing.",
-      tags: ["React", "API Integration", "UI Optimization"],
+      title: "Telkomcel CRM360, Call Center & Helpdesk",
+      description: "Revamped the CRM360, Call Center, and Helpdesk login portal (Centro Informação) systems for Telkomcel. Integrated REST APIs using Swagger and resolved frontend UI issues through rigorous debugging and optimization.",
+      tags: ["React", "API Integration", "UI Optimization", "Helpdesk"],
       links: { github: "https://github.com" },
-      icon: "fas fa-headset"
+      icon: "fas fa-headset",
+      image: "/Images/Telkomcel_Helpdesk.png"
     },
     {
       title: "Saúde Hospital Information System",
       description: "Developed healthcare administration interfaces for the Ministry of Health, Timor-Leste. Implemented Portuguese and Tetum i18n translations, along with various logistics modules.",
       tags: ["TypeScript", "Healthcare", "i18n"],
       links: { github: "https://github.com" },
-      icon: "fas fa-hospital"
+      icon: "fas fa-hospital",
+      image: "/Images/HIS_Saude.png"
     },
     {
-      title: "BRI TL Web Dashboard",
-      description: "Contributed to frontend development for banking and payment-related Dashboard, establishing standardized terminologies for Bank Rakyat Indonesia Timor-Leste Branch.",
-      tags: ["JavaScript", "Banking", "UI Implementation"],
+      title: "BRI TL Web Dashboard & BRILink Apps",
+      description: "Contributed to frontend development for banking and payment-related Dashboards (BRILiaN & BRILink Apps), establishing standardized terminologies and interfaces for Bank Rakyat Indonesia Timor-Leste Branch.",
+      tags: ["JavaScript", "Banking", "UI Implementation", "BRILink"],
       links: { github: "https://github.com" },
-      icon: "fas fa-university"
+      icon: "fas fa-university",
+      image: "/Images/BRILink_Dashboard.png"
     }
   ],
 

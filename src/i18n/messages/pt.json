@@ -67,16 +67,16 @@
         "description": "Um aplicativo BSS corporativo gerenciando fluxos de trabalho de telecomunicações, ciclos de vida de assinantes e lógicas complexas de faturamento. Arquitetura frontend escalável com lazy loading, busca de dados moderna e rigoroso controle de acesso baseado em funções usando o sistema de design Metronic 9."
       },
       {
-        "title": "CRM360 e Call Center da Telkomcel",
-        "description": "Reformulação do sistema CRM360 e Call Center para a Telkomcel. Integração de APIs usando Swagger e resolução de problemas de frontend através de correção de bugs."
+        "title": "CRM360, Call Center e Helpdesk da Telkomcel",
+        "description": "Reformulação dos sistemas de CRM360, Call Center e portal de login Helpdesk (Centro Informação) para a Telkomcel. Integração de APIs REST usando Swagger e otimização da interface de usuário (UI) através de depuração e correções contínuas."
       },
       {
         "title": "Sistema de Informação Hospitalar Saúde",
         "description": "Desenvolvimento de interfaces de administração de saúde para o Ministério da Saúde, Timor-Leste. Implementação de traduções i18n em Português e Tétum, juntamente com vários módulos de logística."
       },
       {
-        "title": "Painel Web BRI TL",
-        "description": "Contribuição para o desenvolvimento frontend de um painel bancário e relacionado a pagamentos, estabelecendo terminologias padronizadas para a filial do Bank Rakyat Indonesia em Timor-Leste."
+        "title": "Painel Web BRI TL & BRILink Apps",
+        "description": "Contribuição para o desenvolvimento frontend de painéis bancários e relacionados a pagamentos (BRILiaN & BRILink Apps), estabelecendo terminologias e interfaces padronizadas para a filial do Bank Rakyat Indonesia em Timor-Leste."
       }
     ]
   },

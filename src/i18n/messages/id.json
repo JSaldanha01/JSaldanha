@@ -67,16 +67,16 @@
         "description": "Aplikasi BSS perusahaan yang mengelola alur kerja telekomunikasi, siklus hidup pelanggan, dan logika penagihan kompleks. Merekayasa arsitektur frontend yang dapat diskalakan dengan lazy loading, pengambilan data modern, dan kontrol akses berbasis peran yang ketat menggunakan sistem desain Metronic 9."
       },
       {
-        "title": "Telkomcel CRM360 & Call Center",
-        "description": "Merombak sistem CRM360 dan Call Center untuk Telkomcel. Mengintegrasikan API menggunakan Swagger dan menyelesaikan masalah frontend melalui perbaikan bug."
+        "title": "CRM360, Call Center & Helpdesk Telkomcel",
+        "description": "Merombak sistem CRM360, Call Center, dan portal login Helpdesk (Centro Informação) untuk Telkomcel. Mengintegrasikan REST API menggunakan Swagger dan menyelesaikan masalah UI frontend melalui debugging dan optimasi."
       },
       {
         "title": "Sistem Informasi Rumah Sakit Saúde",
         "description": "Mengembangkan antarmuka administrasi perawatan kesehatan untuk Kementerian Kesehatan, Timor-Leste. Menerapkan terjemahan i18n Portugis dan Tetum, bersama dengan berbagai modul logistik."
       },
       {
-        "title": "Dasbor Web BRI TL",
-        "description": "Berkontribusi pada pengembangan frontend untuk Dashboard perbankan dan pembayaran, menetapkan terminologi standar untuk Bank Rakyat Indonesia Cabang Timor-Leste."
+        "title": "Dasbor Web BRI TL & BRILink Apps",
+        "description": "Berkontribusi pada pengembangan frontend untuk Dasbor perbankan dan pembayaran (BRILiaN & BRILink Apps), menetapkan terminologi dan antarmuka standar untuk Bank Rakyat Indonesia Cabang Timor-Leste."
       }
     ]
   },

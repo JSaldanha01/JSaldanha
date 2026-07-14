@@ -67,16 +67,16 @@
         "description": "An enterprise BSS application managing telecommunication workflows, subscriber lifecycles, and complex billing logic. Engineered a scalable frontend architecture with lazy loading, modern data fetching, and strict role-based access control using the Metronic 9 design system."
       },
       {
-        "title": "Telkomcel CRM360 & Call Center",
-        "description": "Revamped the CRM360 and Call Center system for Telkomcel. Integrated APIs using Swagger and resolved frontend issues through bug fixing."
+        "title": "Telkomcel CRM360, Call Center & Helpdesk",
+        "description": "Revamped the CRM360, Call Center, and Helpdesk login portal (Centro Informação) systems for Telkomcel. Integrated REST APIs using Swagger and resolved frontend UI issues through rigorous debugging and optimization."
       },
       {
         "title": "Saúde Hospital Information System",
         "description": "Developed healthcare administration interfaces for the Ministry of Health, Timor-Leste. Implemented Portuguese and Tetum i18n translations, along with various logistics modules."
       },
       {
-        "title": "BRI TL Web Dashboard",
-        "description": "Contributed to frontend development for banking and payment-related Dashboard, establishing standardized terminologies for Bank Rakyat Indonesia Timor-Leste Branch."
+        "title": "BRI TL Web Dashboard & BRILink Apps",
+        "description": "Contributed to frontend development for banking and payment-related Dashboards (BRILiaN & BRILink Apps), establishing standardized terminologies and interfaces for Bank Rakyat Indonesia Timor-Leste Branch."
       }
     ]
   },

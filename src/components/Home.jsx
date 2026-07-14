@@ -313,6 +313,57 @@ const Home = () => {
                 )}
                 <i className={`${project.icon} project-icon`}></i>
                 <h3 className="project-title">{t(`projects.items.${index}.title`, { defaultValue: project.title })}</h3>
+                {(project.image || project.images) && (
+                  <div
+                    onClick={() => setSelectedCertImage(project.images ? { images: project.images, index: 0, title: t(`projects.items.${index}.title`, { defaultValue: project.title }) } : project.image)}
+                    style={{
+                      position: 'relative',
+                      overflow: 'hidden',
+                      borderRadius: '10px',
+                      marginBottom: '1rem',
+                      border: '1px solid rgba(255, 255, 255, 0.08)',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <img
+                      src={project.images ? project.images[0] : project.image}
+                      alt={project.title}
+                      style={{
+                        width: '100%',
+                        height: '180px',
+                        objectFit: 'cover',
+                        display: 'block',
+                        transition: 'transform 0.3s ease'
+                      }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '8px',
+                      right: '8px',
+                      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                      backdropFilter: 'blur(6px)',
+                      padding: '4px 10px',
+                      borderRadius: '20px',
+                      fontSize: '0.72rem',
+                      color: '#fff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '5px',
+                      border: '1px solid rgba(255, 255, 255, 0.18)',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+                    }}>
+                      {project.images && project.images.length > 1 ? (
+                        <>
+                          <i className="fas fa-images"></i> Gallery ({project.images.length})
+                        </>
+                      ) : (
+                        <>
+                          <i className="fas fa-search-plus"></i> View Preview
+                        </>
+                      )}
+                    </div>
+                  </div>
+                )}
                 <p className="project-desc">{t(`projects.items.${index}.description`, { defaultValue: project.description })}</p>
                 <div className="project-tags">
                   {project.tags.map(tag => (
@@ -731,9 +782,11 @@ const Home = () => {
           style={{
             position: 'fixed',
             top: 0, left: 0, right: 0, bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.85)',
+            backgroundColor: 'rgba(0, 0, 0, 0.88)',
+            backdropFilter: 'blur(8px)',
             zIndex: 9999,
             display: 'flex',
+            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             padding: '2rem',
@@ -742,7 +795,14 @@ const Home = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh' }}
+            style={{
+              position: 'relative',
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
           >
             <button
               onClick={() => setSelectedCertImage(null)}
@@ -750,24 +810,143 @@ const Home = () => {
                 position: 'absolute',
                 top: '-40px', right: 0,
                 background: 'none', border: 'none',
-                color: 'white', fontSize: '2rem',
-                cursor: 'pointer'
+                color: 'white', fontSize: '2.2rem',
+                cursor: 'pointer',
+                zIndex: 10
               }}
             >
               &times;
             </button>
-            <img
-              src={selectedCertImage}
-              alt="Certificate Full"
-              style={{
-                maxWidth: '100%',
-                maxHeight: '85vh',
-                objectFit: 'contain',
-                borderRadius: '8px',
-                boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
-                cursor: 'default'
-              }}
-            />
+
+            {typeof selectedCertImage === 'object' && selectedCertImage.images ? (
+              <>
+                <div style={{
+                  color: '#fff',
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  marginBottom: '10px',
+                  textAlign: 'center',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '6px 16px',
+                  borderRadius: '20px',
+                  border: '1px solid rgba(255, 255, 255, 0.15)'
+                }}>
+                  {selectedCertImage.title} <span style={{ opacity: 0.7, marginLeft: '8px', fontSize: '0.85rem' }}>({selectedCertImage.index + 1} / {selectedCertImage.images.length})</span>
+                </div>
+
+                <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                  {selectedCertImage.images.length > 1 && (
+                    <button
+                      onClick={() => setSelectedCertImage(prev => ({
+                        ...prev,
+                        index: (prev.index - 1 + prev.images.length) % prev.images.length
+                      }))}
+                      style={{
+                        background: 'rgba(0, 0, 0, 0.65)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        color: 'white',
+                        width: '45px',
+                        height: '45px',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        fontSize: '1.2rem',
+                        marginRight: '15px',
+                        transition: 'all 0.2s ease',
+                        flexShrink: 0
+                      }}
+                    >
+                      <i className="fas fa-chevron-left"></i>
+                    </button>
+                  )}
+
+                  <img
+                    src={selectedCertImage.images[selectedCertImage.index]}
+                    alt={`Preview slide ${selectedCertImage.index + 1}`}
+                    style={{
+                      maxWidth: '80vw',
+                      maxHeight: '70vh',
+                      objectFit: 'contain',
+                      borderRadius: '8px',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.6)',
+                      cursor: 'default'
+                    }}
+                  />
+
+                  {selectedCertImage.images.length > 1 && (
+                    <button
+                      onClick={() => setSelectedCertImage(prev => ({
+                        ...prev,
+                        index: (prev.index + 1) % prev.images.length
+                      }))}
+                      style={{
+                        background: 'rgba(0, 0, 0, 0.65)',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
+                        color: 'white',
+                        width: '45px',
+                        height: '45px',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        fontSize: '1.2rem',
+                        marginLeft: '15px',
+                        transition: 'all 0.2s ease',
+                        flexShrink: 0
+                      }}
+                    >
+                      <i className="fas fa-chevron-right"></i>
+                    </button>
+                  )}
+                </div>
+
+                {selectedCertImage.images.length > 1 && (
+                  <div style={{
+                    display: 'flex',
+                    gap: '10px',
+                    marginTop: '15px',
+                    overflowX: 'auto',
+                    maxWidth: '80vw',
+                    padding: '5px'
+                  }}>
+                    {selectedCertImage.images.map((imgUrl, i) => (
+                      <img
+                        key={i}
+                        src={imgUrl}
+                        alt={`Thumb ${i + 1}`}
+                        onClick={() => setSelectedCertImage(prev => ({ ...prev, index: i }))}
+                        style={{
+                          width: '70px',
+                          height: '45px',
+                          objectFit: 'cover',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                          border: i === selectedCertImage.index ? '2px solid #3b82f6' : '2px solid transparent',
+                          opacity: i === selectedCertImage.index ? 1 : 0.5,
+                          transition: 'all 0.2s ease'
+                        }}
+                      />
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <img
+                src={selectedCertImage}
+                alt="Certificate Full"
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '85vh',
+                  objectFit: 'contain',
+                  borderRadius: '8px',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                  cursor: 'default'
+                }}
+              />
+            )}
           </div>
         </div>
       )}

@@ -67,16 +67,16 @@
         "description": "Aplikasaun BSS emprezariál ida ne'ebé jere fluxu traballu telekomunikasaun, siklu vida kliente, no lójika faturasaun ne'ebé kompleksu. Dezenha arkitetura frontend ne'ebé bele aumenta ho lazy loading no kontrolu asesu bazeia ba knaar."
       },
       {
-        "title": "Telkomcel CRM360 & Call Center",
-        "description": "Hadi'a sistema CRM360 no Call Center ba Telkomcel. Integra API sira uza Swagger no rezolve problema frontend liu husi hadi'a bug sira."
+        "title": "Telkomcel CRM360, Call Center & Helpdesk",
+        "description": "Hadi'a sistema CRM360, Call Center, no portal login Helpdesk (Centro Informação) ba Telkomcel. Integra API REST sira uza Swagger no rezolve problema interfas UI liu husi hadi'a bug no optimizasaun."
       },
       {
         "title": "Sistema Informasaun Ospitál Saúde",
         "description": "Dezenvolve interfas administrasaun saúde ba Ministériu Saúde, Timor-Leste. Implementa tradusaun i18n iha Portugés no Tetum, hamutuk ho modulu lójistika oin-oin."
       },
       {
-        "title": "Dashboard Web BRI TL",
-        "description": "Kontribui ba dezenvolvimentu frontend ba Dashboard bankária nian, estabelese terminolojia padronizada ba Bank Rakyat Indonesia Sukursál Timor-Leste."
+        "title": "Dashboard Web BRI TL & BRILink Apps",
+        "description": "Kontribui ba dezenvolvimentu frontend ba Dashboard bankária no pagamentu nian (BRILiaN & BRILink Apps), estabelese terminolojia no interfas padronizada ba Bank Rakyat Indonesia Sukursál Timor-Leste."
       }
     ]
   },
