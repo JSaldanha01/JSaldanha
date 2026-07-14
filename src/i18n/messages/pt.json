@@ -47,7 +47,7 @@
     "sectionLabel": "O que eu construí",
     "sectionTitle": "Projetos",
     "sectionTitleSpan": "Destaque",
-    "capstone": "Projeto de Conclusão",
+    "capstone": "Projeto Final",
     "liveDemo": "Ver Ao Vivo",
     "items": [
       {
@@ -104,16 +104,16 @@
       },
       {
         "period": "2008 - 2018",
-        "degree": "Ensino Básico",
+        "degree": "Jardim de Infância — Ensino Básico",
         "institution": "Escola Portuguesa de Díli",
-        "description": "Concluiu do Jardim de Infância ao 8º ano. Recebeu educação bilíngue em Português."
+        "description": "Concluiu do Jardim de Infância ao 8º ano (2008 - 2018). Recebeu educação bilíngue em Português."
       }
     ]
   },
   "experience": {
     "items": [
       {
-        "period": "Jan 2025 - Jun 2025",
+        "period": "Setembro 2025 - Junho 2026",
         "position": "Estagiário de Desenvolvimento Frontend",
         "organization": "PT Shibly Teknologi Solusi",
         "description": "Desenvolveu sistemas frontend corporativos para a plataforma BSS da Telkomcel, painel web do BRI Timor-Leste e o HIS Saúde do Ministério da Saúde. Trabalhou com React, TypeScript e Tailwind CSS em projetos de clientes de alto nível."
@@ -135,7 +135,10 @@
   "certificates": {
     "sectionLabel": "Minhas qualificações",
     "sectionTitle": "Licenças &",
-    "sectionTitleSpan": "Certificações"
+    "sectionTitleSpan": "Certificações",
+    "otherTitle": "Outros Certificados &",
+    "otherTitleSpan": "Reconhecimentos",
+    "otherSub": "Cursos de Formação, Estágios, Associação Universitária & Participação em Eventos"
   },
   "contact": {
     "sectionLabel": "Vamos nos conectar",

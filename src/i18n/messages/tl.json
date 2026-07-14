@@ -104,16 +104,16 @@
       },
       {
         "period": "2008 - 2018",
-        "degree": "Ensinu Báziku",
+        "degree": "Pre-Eskolár — Ensinu Báziku",
         "institution": "Escola Portuguesa de Díli",
-        "description": "Remata Pre-Eskolár to'o 8º anu. Simu edukasaun bilingue iha Portugés."
+        "description": "Remata Pre-Eskolár to'o 8º anu (2008 - 2018). Simu edukasaun bilingue iha Portugués."
       }
     ]
   },
   "experience": {
     "items": [
       {
-        "period": "Jan 2025 - Jun 2025",
+        "period": "Setembru 2025 - Juñu 2026",
         "position": "Estajiáriu Dezenvolvedór Frontend",
         "organization": "PT Shibly Teknologi Solusi",
         "description": "Dezenvolve sistema frontend emprezariál ba plataforma BSS Telkomcel nian, dashboard web BRI Timor-Leste, no HIS Saúde Ministériu Saúde nian."
@@ -122,7 +122,7 @@
         "period": "Outubru 2024 - Outubru 2025",
         "position": "Sekretáriu I",
         "organization": "Asosiasaun Estudante Timoroan President University",
-        "description": "Jere serbisu administrativu, organiza nota reuniaun, no koordena komunikasaun entre membru sira."
+        "description": "Jere servisu administrativu, organiza nota reuniaun, no koordena komunikasaun entre membru sira."
       },
       {
         "period": "Outubru 2024 - Outubru 2025",
@@ -135,7 +135,10 @@
   "certificates": {
     "sectionLabel": "Hau nia kualifikasaun",
     "sectionTitle": "Lisensa &",
-    "sectionTitleSpan": "Sertifikadu"
+    "sectionTitleSpan": "Sertifikadu",
+    "otherTitle": "Sertifikadu Seluk &",
+    "otherTitleSpan": "Rekoñesimentu",
+    "otherSub": "Kursu Formasaun, Estajiamentu, Asosiasaun Universidade & Partisipasaun Eventu"
   },
   "contact": {
     "sectionLabel": "Mai ita liga malu",

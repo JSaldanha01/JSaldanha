@@ -104,16 +104,16 @@
       },
       {
         "period": "2008 - 2018",
-        "degree": "Sekolah Menengah Pertama",
+        "degree": "Taman Kanak-kanak — Sekolah Menengah Pertama",
         "institution": "Sekolah Portugis Dili",
-        "description": "Menyelesaikan Taman Kanak-kanak hingga Kelas 8. Menerima pendidikan dwibahasa dalam bahasa Portugis."
+        "description": "Menyelesaikan pendidikan dari Taman Kanak-kanak hingga Kelas 8 (2008 - 2018). Menerima pendidikan dwibahasa dalam bahasa Portugis."
       }
     ]
   },
   "experience": {
     "items": [
       {
-        "period": "Jan 2025 - Jun 2025",
+        "period": "September 2025 - Juni 2026",
         "position": "Magang Frontend Developer",
         "organization": "PT Shibly Teknologi Solusi",
         "description": "Mengembangkan sistem frontend perusahaan untuk platform BSS inti Telkomcel, dasbor web BRI Timor-Leste, dan HIS Saúde Kementerian Kesehatan. Bekerja dengan React, TypeScript, dan Tailwind CSS."
@@ -135,7 +135,10 @@
   "certificates": {
     "sectionLabel": "Kualifikasi saya",
     "sectionTitle": "Lisensi &",
-    "sectionTitleSpan": "Sertifikasi"
+    "sectionTitleSpan": "Sertifikasi",
+    "otherTitle": "Sertifikat Lainnya &",
+    "otherTitleSpan": "Penghargaan",
+    "otherSub": "Kursus Pelatihan, Sertifikat Magang, Asosiasi Universitas & Partisipasi Acara"
   },
   "contact": {
     "sectionLabel": "Mari terhubung",

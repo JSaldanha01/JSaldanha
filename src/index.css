@@ -25,6 +25,9 @@
   --pink: #f472b6;
   --pink-dim: rgba(244, 114, 182, 0.08);
   --pink-border: rgba(244, 114, 182, 0.2);
+  --networking: #38bdf8;
+  --networking-dim: rgba(56, 189, 248, 0.08);
+  --networking-border: rgba(56, 189, 248, 0.2);
 
   --card-border: rgba(255, 255, 255, 0.055);
   --shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
@@ -522,6 +525,11 @@ section {
 .skill-group-label.Creative { color: var(--pink); }
 .skill-badge.Creative { background: var(--pink-dim); border-color: var(--pink-border); }
 .skill-group-line.Creative { background: var(--pink); }
+
+.skill-badge.Networking,
+.skill-group-label.Networking { color: var(--networking); }
+.skill-badge.Networking { background: var(--networking-dim); border-color: var(--networking-border); }
+.skill-group-line.Networking { background: var(--networking); }
 
 /* ================================================
    PROJECTS CAROUSEL

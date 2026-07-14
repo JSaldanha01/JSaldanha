@@ -16,6 +16,7 @@ const Home = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
   const [selectedCertImage, setSelectedCertImage] = useState(null);
   const [selectedEmbedUrl, setSelectedEmbedUrl] = useState(null);
+  const [selectedOtherCategory, setSelectedOtherCategory] = useState('All');
 
   const carouselRef = useRef(null);
   const formRef = useRef(null);
@@ -203,7 +204,7 @@ const Home = () => {
             {/* Stats card */}
             <div className="hero-stats-card reveal reveal-d3">
               <div className="stat-item">
-                <span className="stat-number">3.44</span>
+                <span className="stat-number">3.56</span>
                 <span className="stat-label">{t('hero.stats.gpa')}</span>
               </div>
               <div className="stat-item">
@@ -472,7 +473,7 @@ const Home = () => {
                             transition: 'all 0.2s ease'
                           }}
                         >
-                          Verify Credential <i className="fas fa-external-link-alt" style={{ fontSize: '0.7rem' }}></i>
+                          {cert.urlLabel || 'Verify Credential'} <i className="fas fa-external-link-alt" style={{ fontSize: '0.7rem' }}></i>
                         </a>
                       )}
                     </div>
@@ -480,6 +481,163 @@ const Home = () => {
                 );
               })}
             </div>
+
+            {/* ── OTHER CERTIFICATES & RECOGNITIONS ── */}
+            {portfolioData.otherCertificates && portfolioData.otherCertificates.length > 0 && (
+              <div style={{ marginTop: '4.5rem' }}>
+                <h3 className="section-heading reveal reveal-d1" style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>
+                  {t('certificates.otherTitle', { defaultValue: 'Other Certificates &' })} <span>{t('certificates.otherTitleSpan', { defaultValue: 'Recognitions' })}</span>
+                </h3>
+                <p className="timeline-sub reveal reveal-d2" style={{ marginBottom: '2rem', color: '#94a3b8' }}>
+                  {t('certificates.otherSub', { defaultValue: 'Training Courses, Internship Records, University Association & Event Participation' })}
+                </p>
+
+                {/* Interactive Category Filter Pills */}
+                {(() => {
+                  const categories = ['All', ...new Set(portfolioData.otherCertificates.map(c => c.category || 'General'))];
+                  if (categories.length > 1) {
+                    return (
+                      <div className="reveal reveal-d2" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '2.5rem' }}>
+                        {categories.map((cat, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setSelectedOtherCategory(cat)}
+                            style={{
+                              padding: '8px 18px',
+                              borderRadius: '30px',
+                              border: selectedOtherCategory === cat ? '1px solid #38bdf8' : '1px solid rgba(255, 255, 255, 0.1)',
+                              backgroundColor: selectedOtherCategory === cat ? 'rgba(56, 189, 248, 0.15)' : 'rgba(255, 255, 255, 0.03)',
+                              color: selectedOtherCategory === cat ? '#38bdf8' : '#cbd5e1',
+                              fontSize: '0.85rem',
+                              fontWeight: 500,
+                              cursor: 'pointer',
+                              transition: 'all 0.25s ease',
+                              boxShadow: selectedOtherCategory === cat ? '0 0 15px rgba(56, 189, 248, 0.2)' : 'none'
+                            }}
+                          >
+                            {cat}
+                          </button>
+                        ))}
+                      </div>
+                    );
+                  }
+                  return null;
+                })()}
+
+                <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+                  {portfolioData.otherCertificates
+                    .filter(cert => selectedOtherCategory === 'All' || (cert.category || 'General') === selectedOtherCategory)
+                    .map((cert, i) => {
+                      return (
+                        <div
+                          key={i}
+                          className={`timeline-entry reveal reveal-d${(i % 3) + 1}`}
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '10px',
+                            textDecoration: 'none',
+                            color: 'inherit',
+                            cursor: cert.url || cert.embedUrl || cert.image ? 'pointer' : 'default'
+                          }}
+                          onClick={() => {
+                            if (cert.embedUrl) {
+                              setSelectedEmbedUrl(cert.embedUrl);
+                            } else if (cert.image) {
+                              setSelectedCertImage(cert.image);
+                            } else if (cert.url) {
+                              window.open(cert.url, '_blank', 'noopener,noreferrer');
+                            }
+                          }}
+                        >
+                          {cert.image && (
+                            <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '10px', marginBottom: '12px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                              <img
+                                src={cert.image}
+                                alt={cert.title}
+                                style={{
+                                  width: '100%',
+                                  height: '210px',
+                                  objectFit: 'cover',
+                                  display: 'block',
+                                  transition: 'transform 0.3s ease'
+                                }}
+                              />
+                              <div style={{
+                                position: 'absolute',
+                                bottom: '10px',
+                                right: '10px',
+                                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                                backdropFilter: 'blur(6px)',
+                                padding: '5px 12px',
+                                borderRadius: '20px',
+                                fontSize: '0.75rem',
+                                color: '#fff',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '6px',
+                                border: '1px solid rgba(255, 255, 255, 0.18)',
+                                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+                              }}>
+                                <i className="fas fa-search-plus"></i> View Certificate
+                              </div>
+                            </div>
+                          )}
+                          <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                            <div>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '6px' }}>
+                                {cert.category && (
+                                  <span style={{
+                                    fontSize: '0.7rem',
+                                    padding: '3px 9px',
+                                    borderRadius: '12px',
+                                    backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                                    color: '#38bdf8',
+                                    border: '1px solid rgba(56, 189, 248, 0.25)',
+                                    fontWeight: 600,
+                                    letterSpacing: '0.3px'
+                                  }}>
+                                    {cert.category}
+                                  </span>
+                                )}
+                                <p className="timeline-period" style={{ margin: 0 }}>{cert.date ? `${cert.date} · ${cert.status}` : cert.status}</p>
+                              </div>
+                              <h3 className="timeline-title" style={{ marginTop: '4px' }}><i className={cert.icon || 'fas fa-certificate'} style={{ marginRight: '8px' }}></i>{cert.title}</h3>
+                              <p className="timeline-sub">{cert.issuer}</p>
+                            </div>
+                            {cert.url && (
+                              <a
+                                href={cert.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                style={{
+                                  display: 'inline-flex',
+                                  alignItems: 'center',
+                                  gap: '6px',
+                                  marginTop: '12px',
+                                  padding: '6px 12px',
+                                  borderRadius: '6px',
+                                  backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                                  border: '1px solid rgba(56, 189, 248, 0.25)',
+                                  color: '#38bdf8',
+                                  fontSize: '0.8rem',
+                                  fontWeight: 500,
+                                  textDecoration: 'none',
+                                  width: 'fit-content',
+                                  transition: 'all 0.2s ease'
+                                }}
+                              >
+                                {cert.urlLabel || 'Verify Credential'} <i className="fas fa-external-link-alt" style={{ fontSize: '0.7rem' }}></i>
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                </div>
+              </div>
+            )}
           </section>
         )}
 

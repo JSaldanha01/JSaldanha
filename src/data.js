@@ -30,8 +30,17 @@ export const portfolioData = {
     { name: "Vite", progress: 80, icon: "fas fa-bolt", category: "Frontend" },
     { name: "Git & GitHub", progress: 85, icon: "fab fa-git-alt", category: "DevOps" },
     { name: "Linux / VPS", progress: 72, icon: "fab fa-linux", category: "DevOps" },
-    { name: "Epicor Kinetic ERP", progress: 70, icon: "fas fa-cogs", category: "ERP" },
     { name: "CI/CD (GitHub Actions)", progress: 68, icon: "fas fa-infinity", category: "DevOps" },
+    { name: "MikroTik RouterOS", progress: 90, icon: "fas fa-network-wired", category: "Networking" },
+    { name: "OSPF & Dynamic Routing", progress: 88, icon: "fas fa-route", category: "Networking" },
+    { name: "VLAN & Subnetting", progress: 85, icon: "fas fa-sitemap", category: "Networking" },
+    { name: "Network Firewalls & Security", progress: 85, icon: "fas fa-shield-alt", category: "Networking" },
+    { name: "Site-to-Site VPN", progress: 82, icon: "fas fa-lock", category: "Networking" },
+    { name: "TCP/IP Suite & IP Addressing", progress: 88, icon: "fas fa-globe", category: "Networking" },
+    { name: "Network Load Balancing (PCC / ECMP)", progress: 85, icon: "fas fa-balance-scale", category: "Networking" },
+    { name: "Policy-Based Routing (PBR)", progress: 82, icon: "fas fa-random", category: "Networking" },
+    { name: "Network Failover & High Availability", progress: 85, icon: "fas fa-server", category: "Networking" },
+    { name: "Epicor Kinetic ERP", progress: 70, icon: "fas fa-cogs", category: "ERP" },
     { name: "Photo Editing", progress: 85, icon: "fas fa-camera", category: "Creative" },
     { name: "Video Editing", progress: 75, icon: "fas fa-video", category: "Creative" }
   ],
@@ -99,7 +108,7 @@ export const portfolioData = {
     {
       organization: "PT Shibly Teknologi Solusi",
       position: "Frontend Developer Intern",
-      period: "Jan 2025 - Jun 2025",
+      period: "September 2025 - June 2026",
       description: "Developed enterprise frontend systems for Telkomcel's core BSS platform, BRI Timor-Leste's web dashboard, and the Ministry of Health's Saúde HIS. Worked with React, TypeScript, and Tailwind CSS across high-stakes client projects."
     },
     {
@@ -112,7 +121,7 @@ export const portfolioData = {
       organization: "President University Faculty Association of Computer Science",
       position: "Vice Chairperson II",
       period: "October 2024 - October 2025",
-      description: "Led faculty association activities, organized technical events, and advocated for student welfare within the Faculty of computer science ."
+      description: "Led faculty association activities, organized technical events, and advocated for student welfare within the Faculty of Computer Science."
     }
   ],
 
@@ -134,9 +143,9 @@ export const portfolioData = {
     },
     {
       period: "2008 - 2018",
-      degree: "Middle School",
+      degree: "Kindergarten — Middle School",
       institution: "Escola Portuguesa de Díli (Portuguese School)",
-      description: "Completed Kindergarten through Grade 8. Received bilingual education in Portuguese."
+      description: "Completed Kindergarten through Grade 8 (2008 - 2018). Received bilingual education in Portuguese."
     }
   ],
 
@@ -157,22 +166,59 @@ export const portfolioData = {
       date: "July 2026",
       status: "Certified",
       icon: "fas fa-network-wired",
-      image: "/Certificate%20MTCNA.jpg",
+      image: "/certificates/Certificate%20MTCNA.jpg",
       url: "https://mikrotik.com/training/certificates/c730054c94e5a0ab9823",
+    },
+    {
+      title: "MikroTik Certified Routing Engineer (MTCRE)",
+      issuer: "MikroTik",
+      date: "July 2026",
+      status: "Certified",
+      icon: "fas fa-route",
+      image: "/certificates/Certificate%20MTCRE.jpg",
+      url: "https://mikrotik.com/training/certificates/c730263cdba8d4dc59e7",
+    }
+  ],
+
+  // Ordinary certificates: Training Courses, Internships, University Associations, Events, etc.
+  otherCertificates: [
+    {
+      title: "Frontend Developer Internship Certificate",
+      issuer: "PT Shibly Teknologi Solusi",
+      date: "May 2026",
+      status: "Internship Completed",
+      category: "Internships",
+      icon: "fas fa-laptop-code",
+      image: "/certificates/Intern%20Certificate_Joao.jpg",
+      url: "/certificates/Intern%20Certificate_Joao.pdf",
+      urlLabel: "View PDF Document"
+    },
+    {
+      title: "CompSciGala 2025 — Guard Team Member",
+      issuer: "PUFA Computer Science (President University)",
+      date: "2025",
+      status: "Committee Contribution",
+      category: "Events",
+      icon: "fas fa-user-shield",
+      image: "/certificates/Certificate%20Compsigala2025.jpg",
     },
     {
       title: "MikroTik MTCNA Training Course",
       issuer: "IDN Networkers / MikroTik",
       date: "July 2026",
       status: "Training Completed",
+      category: "Training Courses",
       icon: "fas fa-certificate",
-      image: "/Certificate%20MTCNA%20Training%20IDN.jpeg",
+      image: "/certificates/Certificate%20MTCNA%20Training%20IDN.jpeg",
     },
     {
-      title: "MikroTik Certified Routing Engineer (MTCRE)",
-      issuer: "MikroTik",
-      status: "Pending",
-      icon: "fas fa-route",
+      title: "MikroTik MTCRE Training Course",
+      issuer: "IDN Networkers / MikroTik",
+      date: "July 2026",
+      status: "Training Completed",
+      category: "Training Courses",
+      icon: "fas fa-certificate",
+      image: "/certificates/Certificate%20MTCRE%20Training%20IDN.jpeg",
     }
   ],
 

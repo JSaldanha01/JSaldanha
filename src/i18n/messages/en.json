@@ -104,16 +104,16 @@
       },
       {
         "period": "2008 - 2018",
-        "degree": "Middle School",
+        "degree": "Kindergarten — Middle School",
         "institution": "Escola Portuguesa de Díli (Portuguese School)",
-        "description": "Completed Kindergarten through Grade 8. Received bilingual education in Portuguese."
+        "description": "Completed Kindergarten through Grade 8 (2008 - 2018). Received bilingual education in Portuguese."
       }
     ]
   },
   "experience": {
     "items": [
       {
-        "period": "Jan 2025 - Jun 2025",
+        "period": "September 2025 - June 2026",
         "position": "Frontend Developer Intern",
         "organization": "PT Shibly Teknologi Solusi",
         "description": "Developed enterprise frontend systems for Telkomcel's core BSS platform, BRI Timor-Leste's web dashboard, and the Ministry of Health's Saúde HIS. Worked with React, TypeScript, and Tailwind CSS across high-stakes client projects."
@@ -128,14 +128,17 @@
         "period": "October 2024 - October 2025",
         "position": "Vice Chairperson II",
         "organization": "President University Faculty Association of Computer Science",
-        "description": "Led faculty association activities, organized technical events, and advocated for student welfare within the Faculty of computer science."
+        "description": "Led faculty association activities, organized technical events, and advocated for student welfare within the Faculty of Computer Science."
       }
     ]
   },
   "certificates": {
     "sectionLabel": "My qualifications",
     "sectionTitle": "Licenses &",
-    "sectionTitleSpan": "Certifications"
+    "sectionTitleSpan": "Certifications",
+    "otherTitle": "Other Certificates &",
+    "otherTitleSpan": "Recognitions",
+    "otherSub": "Training Courses, Internship Records, University Association & Event Participation"
   },
   "contact": {
     "sectionLabel": "Let's connect",
