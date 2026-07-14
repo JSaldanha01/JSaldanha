@@ -319,6 +319,20 @@ const Home = () => {
                     <span key={tag} className="tag">{tag}</span>
                   ))}
                 </div>
+                {project.links && (project.links.github || project.links.live) && (
+                  <div className="project-links-row">
+                    {project.links.github && (
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="project-link-btn">
+                        <i className="fab fa-github"></i> GitHub
+                      </a>
+                    )}
+                    {project.links.live && (
+                      <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="project-link-btn" style={{ color: '#38bdf8' }}>
+                        <i className="fas fa-external-link-alt"></i> {t('projects.liveDemo', { defaultValue: 'Live Demo' })}
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>

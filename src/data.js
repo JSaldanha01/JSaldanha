@@ -57,7 +57,7 @@ export const portfolioData = {
       title: "João Saldanha University Management System (JSU-UMS)",
       description: "Capstone Final Project: A comprehensive full-stack educational platform for academic administration. Built with Laravel 11 and deployed on a secure LEMP stack cloud VPS. Features automated CI/CD, real-time observability via Prometheus/Grafana, and high-performance background processing.",
       tags: ["Laravel", "LEMP Stack", "CI/CD", "Prometheus"],
-      links: { github: "https://github.com" },
+      links: { github: "https://github.com", live: "https://staging.jsaldanha.com" },
       icon: "fas fa-graduation-cap"
     },
     {
