@@ -203,6 +203,15 @@ export const portfolioData = {
       image: "/certificates/Certificate%20Compsigala2025.jpg",
     },
     {
+      title: "CS:GO 2025 — Logistics & Accommodation Team",
+      issuer: "PUFA Computer Science (President University)",
+      date: "2025",
+      status: "Committee Contribution",
+      category: "Events",
+      icon: "fas fa-gamepad",
+      image: "/certificates/Certificate%20CSGO%20Guard.jpeg",
+    },
+    {
       title: "MikroTik MTCNA Training Course",
       issuer: "IDN Networkers / MikroTik",
       date: "July 2026",
